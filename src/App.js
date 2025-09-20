@@ -127,7 +127,7 @@ function App() {
               <Grid item xs={12} md={6}>
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 3 }}>
                   <Chip 
-                    icon={<Groups style={{color:"white"}}/>} 
+                    icon={<Groups style={{ color: 'white' }} />} 
                     label={`${members.length} Total Members`} 
                     variant="outlined" 
                     sx={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }} 
@@ -149,42 +149,62 @@ function App() {
                     Team Composition
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                    <Engineering sx={{ fontSize: 20, mr: 1, opacity: 0.8 ,color:"white"}} />
+                    <Engineering sx={{ fontSize: 20, mr: 1, opacity: 0.8, color: 'white' }} />
                     <Box sx={{ flexGrow: 1, mr: 1 }}>
                       <LinearProgress 
-                        style={{color:"white"}}
                         variant="determinate" 
                         value={(developers / members.length) * 100} 
-                        sx={{ height: 8, borderRadius: 4 }} 
+                        sx={{ 
+                          height: 8, 
+                          borderRadius: 4,
+                          backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                          '& .MuiLinearProgress-bar': {
+                            backgroundColor: 'white'
+                          }
+                        }} 
                       />
                     </Box>
-                    <Typography variant="body2" sx={{ minWidth: 40 }}>
+                    <Typography variant="body2" sx={{ minWidth: 40, color: 'white' }}>
                       {developers}
                     </Typography>
                   </Box>
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                    <DesignServices sx={{ fontSize: 20, mr: 1, opacity: 0.8 }} />
+                    <DesignServices sx={{ fontSize: 20, mr: 1, opacity: 0.8, color: 'white' }} />
                     <Box sx={{ flexGrow: 1, mr: 1 }}>
                       <LinearProgress 
                         variant="determinate" 
                         value={(designers / members.length) * 100} 
-                        sx={{ height: 8, borderRadius: 4 }} 
+                        sx={{ 
+                          height: 8, 
+                          borderRadius: 4,
+                          backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                          '& .MuiLinearProgress-bar': {
+                            backgroundColor: 'white'
+                          }
+                        }} 
                       />
                     </Box>
-                    <Typography variant="body2" sx={{ minWidth: 40 }}>
+                    <Typography variant="body2" sx={{ minWidth: 40, color: 'white' }}>
                       {designers}
                     </Typography>
                   </Box>
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                    <ManageAccounts sx={{ fontSize: 20, mr: 1, opacity: 0.8 }} />
+                    <ManageAccounts sx={{ fontSize: 20, mr: 1, opacity: 0.8, color: 'white' }} />
                     <Box sx={{ flexGrow: 1, mr: 1 }}>
                       <LinearProgress 
                         variant="determinate" 
                         value={(managers / members.length) * 100} 
-                        sx={{ height: 8, borderRadius: 4 }} 
+                        sx={{ 
+                          height: 8, 
+                          borderRadius: 4,
+                          backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                          '& .MuiLinearProgress-bar': {
+                            backgroundColor: 'white'
+                          }
+                        }} 
                       />
                     </Box>
-                    <Typography variant="body2" sx={{ minWidth: 40 }}>
+                    <Typography variant="body2" sx={{ minWidth: 40, color: 'white' }}>
                       {managers}
                     </Typography>
                   </Box>
@@ -193,7 +213,7 @@ function App() {
               
               <Grid item xs={12} md={6}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: { xs: 'flex-start', md: 'flex-end' } }}>
-                  <Typography variant="body2" sx={{ mb: 2, opacity: 0.9 }}>
+                  <Typography variant="body2" sx={{ mb: 2, opacity: 0.9, color: 'white' }}>
                     Recent Team Members
                   </Typography>
                   <AvatarGroup max={6} sx={{ justifyContent: 'flex-end' }}>
@@ -222,7 +242,7 @@ function App() {
                       borderRadius: 2
                     }}
                   >
-                    <Typography variant="body2" sx={{ fontStyle: 'italic', textAlign: 'center' }}>
+                    <Typography variant="body2" sx={{ fontStyle: 'italic', textAlign: 'center', color: 'white' }}>
                       "Great things in business are never done by one person. They're done by a team of people."
                     </Typography>
                   </Card>
